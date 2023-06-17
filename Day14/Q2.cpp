@@ -1,0 +1,27 @@
+// https://leetcode.com/problems/number-of-1-bits/description/
+
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        
+    int ans=0;
+    while(n>0)
+    {
+        if(n&1 != 0)
+        {
+            ans++;
+        }
+        n=n>>1;
+    }
+    return ans;
+
+    }
+};
+
+/* Complexity
+    Time complexity:
+        O(1)
+
+    Space complexity:
+        O(1)
+*/
